@@ -1,19 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>अनिद्रा प्रबोधकम्| Discord bot features</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;550;650;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-
-    <h1>Welcome to My Website</h1>
-
-    <p>This is the home page.</p>
-
-    <a href="terms.html">Terms & Conditions</a>
-    <a href="privacy.html">Privacy Policy</a>
-
+  <header class="nav">
+    <a class="brand" href="index.html"><span class="mark">A</span> ANIBODHA</a>
+    <button class="menu-btn" data-menu aria-label="Open menu">Menu</button>
+    <nav class="nav-links" data-links>
+      <a href="index.html">Home</a>
+      <a href="sentinel.html">Sentinel</a>
+      <a href="spark.html">Spark</a>
+      <a href="atlas.html">Atlas</a>
+      <a href="terms-sentinel.html">Terms</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <span class="kicker">Family-friendly Discord bots</span>
+      <h1>Bots that keep servers <span class="grad">safe, useful, and fun.</span></h1>
+      <p class="lede">ANIBODHA is a starter site for your Discord bots. Each bot has its own feature page and its own terms and conditions page, so members know exactly what a bot does and how it handles data.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#bots">See the bots</a>
+        <a class="btn ghost" href="terms-sentinel.html">Read terms</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>3</b><span>bots with separate pages</span></div>
+        <div class="stat"><b>3</b><span>terms documents</span></div>
+        <div class="stat"><b>0</b><span>account required to browse</span></div>
+      </div>
+    </section>
+    <section class="section" id="bots">
+      <h2>Bot lineup</h2>
+      <p class="sub">Replace these names and features with your real bots. The page structure is ready.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="icon blue">S</div>
+          <h3>Sentinel</h3>
+          <p>Moderation and safety tools for keeping a server calm, clear, and well logged.</p>
+          <div class="tags"><span class="tag">Auto-mod</span><span class="tag">Warnings</span><span class="tag">Logs</span></div>
+          <div class="card-links"><a href="sentinel.html">Features</a><a href="terms-sentinel.html">Terms</a></div>
+        </article>
+        <article class="card">
+          <div class="icon mint">P</div>
+          <h3>Spark</h3>
+          <p>Community tools for welcomes, polls, levels, and friendly server events.</p>
+          <div class="tags"><span class="tag">Welcome</span><span class="tag">Polls</span><span class="tag">Levels</span></div>
+          <div class="card-links"><a href="spark.html">Features</a><a href="terms-spark.html">Terms</a></div>
+        </article>
+        <article class="card">
+          <div class="icon amber">A</div>
+          <h3>Atlas</h3>
+          <p>Utility commands for reminders, server info, custom replies, and support tickets.</p>
+          <div class="tags"><span class="tag">Reminders</span><span class="tag">Tickets</span><span class="tag">Info</span></div>
+          <div class="card-links"><a href="atlas.html">Features</a><a href="terms-atlas.html">Terms</a></div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>ANIBODHA starter site. Swap in your bot names, invite links, and real policies.</span>
+    <span>Not affiliated with Discord.</span>
+  </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
