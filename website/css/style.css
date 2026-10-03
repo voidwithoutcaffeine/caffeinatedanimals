@@ -1,0 +1,220 @@
+:root {
+  --bg: #0b0c10;
+  --bg-elev: #14161c;
+  --bg-card: #1a1d27;
+  --line: rgba(255, 255, 255, 0.08);
+  --text: #f4f6fb;
+  --muted: #a7adbd;
+  --blurple: #5865f2;
+  --blurple-2: #7c89ff;
+  --mint: #3ee0b0;
+  --amber: #f5c16c;
+  --rose: #ff7a90;
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  --radius: 18px;
+  --max: 1120px;
+  --font: "Sora", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  background:
+    radial-gradient(900px 420px at 10% -10%, rgba(88, 101, 242, 0.28), transparent 60%),
+    radial-gradient(700px 380px at 100% 0%, rgba(62, 224, 176, 0.12), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; }
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 6vw;
+  backdrop-filter: blur(16px);
+  background: rgba(11, 12, 16, 0.72);
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+.mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--blurple), #9b6dff);
+  font-size: 16px;
+}
+.nav-links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+.nav-links a:hover { color: white; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 650;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--blurple), #7a5cff);
+  color: white;
+  box-shadow: 0 8px 24px rgba(88, 101, 242, 0.35);
+}
+.btn.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+.wrap { width: min(var(--max), calc(100% - 8vw)); margin: 0 auto; }
+.hero { padding: 78px 0 36px; }
+.kicker {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: #c9d0ff;
+  background: rgba(88, 101, 242, 0.16);
+  border: 1px solid rgba(88, 101, 242, 0.35);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+h1 {
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  margin: 18px 0 14px;
+}
+.grad {
+  background: linear-gradient(120deg, #fff 10%, #b7c0ff 45%, #7dffe0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.lede { max-width: 680px; color: var(--muted); font-size: 18px; line-height: 1.6; }
+.hero-actions { display: flex; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 38px;
+}
+.stat, .card, .panel {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.stat { padding: 18px; }
+.stat b { display: block; font-size: 26px; letter-spacing: -0.04em; }
+.stat span { color: var(--muted); font-size: 13px; }
+
+.section { padding: 28px 0 70px; }
+.section h2 { font-size: 34px; letter-spacing: -0.04em; margin-bottom: 8px; }
+.sub { color: var(--muted); margin-top: 0; margin-bottom: 22px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card { padding: 22px; transition: transform 0.2s ease, border-color 0.2s ease; }
+.card:hover { transform: translateY(-4px); border-color: rgba(88, 101, 242, 0.45); }
+.icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+.icon.blue { background: rgba(88, 101, 242, 0.18); }
+.icon.mint { background: rgba(62, 224, 176, 0.16); }
+.icon.amber { background: rgba(245, 193, 108, 0.16); }
+.card h3 { margin: 0 0 8px; letter-spacing: -0.03em; }
+.card p { color: var(--muted); line-height: 1.55; min-height: 72px; }
+.tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 16px; }
+.tag {
+  font-size: 12px;
+  color: #d7dcf5;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 8px;
+}
+.card-links { display: flex; gap: 10px; font-size: 14px; }
+.card-links a { color: #c9d0ff; }
+.card-links a:hover { text-decoration: underline; }
+
+.feature-list { display: grid; gap: 12px; }
+.feature {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.03);
+}
+.feature strong { display: block; margin-bottom: 4px; }
+.feature span { color: var(--muted); font-size: 14px; line-height: 1.5; }
+.page-hero { padding: 48px 0 10px; }
+.crumbs { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+.crumbs a { color: #c9d0ff; }
+.legal {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px;
+  line-height: 1.7;
+  color: #d5dae8;
+}
+.legal h2 { font-size: 20px; margin: 22px 0 8px; }
+.legal h2:first-child { margin-top: 0; }
+footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 6vw 40px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.menu-btn { display: none; background: transparent; color: white; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
+@media (max-width: 860px) {
+  .grid, .stats { grid-template-columns: 1fr; }
+  .menu-btn { display: inline-flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 4vw;
+    right: 4vw;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #151821;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 14px;
+  }
+  .nav-links.open { display: flex; }
+}
